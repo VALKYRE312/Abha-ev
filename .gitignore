@@ -88,3 +88,6 @@ documentation/**/*.html
 .cache/
 .codeium/
 .kilo/worktrees/
+frontend/next.config.ts
+frontend/tsconfig.json
+frontend/tailwind.config.ts
