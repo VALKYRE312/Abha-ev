@@ -1,0 +1,11 @@
+
+    ___    ____  __  _____              ______      __                       _          
+   /   |  / __ )/ / / /   |            / ____/___  / /____  _________  _____(_)_______  
+  / /| | / __  / /_/ / /| |           / __/ / __ \/ __/ _ \/ ___/ __ \/ ___/ / ___/ _ \ 
+ / ___ |/ /_/ / __  / ___ |          / /___/ / / / /_/  __/ /  / /_/ / /  / (__  )  __/ 
+/_/  |_/_____/_/ /_/_/  |_|         /_____/_/ /_/\__/\___/_/  / .___/_/  /_/____/\___/  
+                                                              /_/                         
+   Electric Vehicle Commerce & Business Management Platform
+   ${application.title} ${application.version}
+   Powered by Spring Boot ${spring-boot.version}
+   Java ${java.version}

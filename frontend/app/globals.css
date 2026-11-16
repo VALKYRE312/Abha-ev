@@ -1,0 +1,434 @@
+@import "tailwindcss";
+
+/* ============================================
+   ABHA ENTERPRISE DESIGN SYSTEM
+   Brand Colors: Space Cadet, Slate Gray, Tan, Coffee, Caput Mortuum
+   ============================================ */
+
+@layer theme {
+  :root {
+    /* ========== BRAND COLOR PALETTE ========== */
+    --color-space-cadet: #25344F;
+    --color-slate-gray: #617891;
+    --color-tan: #D5B893;
+    --color-coffee: #6F4D38;
+    --color-caput-mortuum: #632024;
+    
+    /* ========== EXTENDED PALETTE ========== */
+    /* Space Cadet Shades (Navy) */
+    --space-cadet-50: #f5f7fa;
+    --space-cadet-100: #e9ecf2;
+    --space-cadet-200: #d3dae5;
+    --space-cadet-300: #b1bdd2;
+    --space-cadet-400: #8899ba;
+    --space-cadet-500: #617891;
+    --space-cadet-600: #4d6178;
+    --space-cadet-700: #3f4f63;
+    --space-cadet-800: #25344F;
+    --space-cadet-900: #1a2537;
+    
+    /* Tan Shades (Gold/Beige) */
+    --tan-50: #faf8f4;
+    --tan-100: #f5f0e6;
+    --tan-200: #ebe0cc;
+    --tan-300: #e0cfb2;
+    --tan-400: #D5B893;
+    --tan-500: #c9a878;
+    --tan-600: #b4915f;
+    --tan-700: #947749;
+    --tan-800: #6F4D38;
+    --tan-900: #4a3325;
+    
+    /* Slate Gray Shades */
+    --slate-gray-50: #f6f8fa;
+    --slate-gray-100: #edf1f4;
+    --slate-gray-200: #dce3ea;
+    --slate-gray-300: #c0ced9;
+    --slate-gray-400: #9fb0c2;
+    --slate-gray-500: #617891;
+    --slate-gray-600: #4d6178;
+    --slate-gray-700: #3f4f63;
+    --slate-gray-800: #2d3a4b;
+    --slate-gray-900: #1f2937;
+    
+    /* Coffee Shades (Rich Brown) */
+    --coffee-50: #faf7f5;
+    --coffee-100: #f4ede8;
+    --coffee-200: #e8dbd1;
+    --coffee-300: #d7c1ae;
+    --coffee-400: #c19f83;
+    --coffee-500: #a47d5f;
+    --coffee-600: #8b6749;
+    --coffee-700: #6F4D38;
+    --coffee-800: #5a3d2d;
+    --coffee-900: #3d2920;
+    
+    /* Caput Mortuum Shades (Burgundy) */
+    --caput-mortuum-50: #fef5f6;
+    --caput-mortuum-100: #fde9eb;
+    --caput-mortuum-200: #fbd3d7;
+    --caput-mortuum-300: #f7a8b0;
+    --caput-mortuum-400: #f17684;
+    --caput-mortuum-500: #e53e51;
+    --caput-mortuum-600: #c92a3d;
+    --caput-mortuum-700: #a21f31;
+    --caput-mortuum-800: #632024;
+    --caput-mortuum-900: #4a181b;
+  }
+}
+
+@layer base {
+  :root {
+    /* ========== SEMANTIC COLOR TOKENS ========== */
+    
+    /* Primary: Space Cadet (Brand Navy) */
+    --primary: 211 36% 23%; /* #25344F */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 36% 18%;
+    --primary-active: 211 36% 15%;
+    
+    /* Secondary: Slate Gray (Muted Blue-Gray) */
+    --secondary: 211 20% 48%; /* #617891 */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 211 20% 40%;
+    --secondary-active: 211 20% 35%;
+    
+    /* Accent: Tan (Warm Gold) */
+    --accent: 38 44% 71%; /* #D5B893 */
+    --accent-foreground: 211 36% 23%;
+    --accent-hover: 38 44% 65%;
+    --accent-active: 38 44% 60%;
+    
+    /* Destructive: Caput Mortuum (Deep Red) */
+    --destructive: 358 51% 26%; /* #632024 */
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 358 51% 20%;
+    --destructive-active: 358 51% 15%;
+    
+    /* Success: Green (for positive states) */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning: Coffee (for attention states) */
+    --warning: 28 53% 44%; /* #6F4D38 */
+    --warning-foreground: 0 0% 100%;
+    
+    /* ========== SURFACE COLORS ========== */
+    --background: 0 0% 100%;
+    --background-secondary: 0 0% 98%;
+    --foreground: 211 36% 23%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 211 36% 23%;
+    --card-hover: 0 0% 98%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 211 36% 23%;
+    
+    /* ========== TEXT & BORDERS ========== */
+    --muted: 211 20% 96%;
+    --muted-foreground: 211 20% 42%;
+    
+    --border: 211 20% 90%;
+    --border-strong: 211 20% 80%;
+    --input: 211 20% 88%;
+    
+    --ring: 38 44% 71%; /* Tan for focus rings */
+    
+    /* ========== SIZING ========== */
+    --radius: 0.5rem;
+    --radius-sm: 0.375rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+  }
+
+  .dark {
+    /* Dark mode with inverted palette */
+    --background: 211 36% 8%;
+    --background-secondary: 211 36% 12%;
+    --foreground: 0 0% 98%;
+    
+    --card: 211 36% 12%;
+    --card-foreground: 0 0% 98%;
+    --card-hover: 211 36% 15%;
+    
+    --popover: 211 36% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 38 44% 71%;
+    --primary-foreground: 211 36% 8%;
+    --primary-hover: 38 44% 75%;
+    
+    --secondary: 211 20% 30%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-hover: 211 20% 35%;
+    
+    --muted: 211 20% 18%;
+    --muted-foreground: 211 20% 60%;
+    
+    --accent: 38 44% 65%;
+    --accent-foreground: 211 36% 8%;
+    
+    --destructive: 358 51% 35%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 211 20% 20%;
+    --border-strong: 211 20% 25%;
+    --input: 211 20% 22%;
+    --ring: 38 44% 71%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+  
+  /* ========== TYPOGRAPHY SYSTEM ========== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+  
+  h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  }
+  
+  h5 {
+    font-size: 1.125rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  p {
+    line-height: 1.7;
+  }
+  
+  /* ========== LINK STYLES ========== */
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  /* ========== FOCUS STYLES ========== */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+  
+  /* ========== SCROLLBAR STYLING ========== */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer utilities {
+  /* ========== TEXT UTILITIES ========== */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* ========== CONTAINER UTILITIES ========== */
+  .container-fluid {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .container-fluid {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-fluid {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* ========== BRAND COLOR UTILITIES ========== */
+  /* Background Colors */
+  .bg-space-cadet { background-color: var(--color-space-cadet); }
+  .bg-slate-gray { background-color: var(--color-slate-gray); }
+  .bg-tan { background-color: var(--color-tan); }
+  .bg-coffee { background-color: var(--color-coffee); }
+  .bg-caput-mortuum { background-color: var(--color-caput-mortuum); }
+  
+  /* Text Colors */
+  .text-space-cadet { color: var(--color-space-cadet); }
+  .text-slate-gray { color: var(--color-slate-gray); }
+  .text-tan { color: var(--color-tan); }
+  .text-coffee { color: var(--color-coffee); }
+  .text-caput-mortuum { color: var(--color-caput-mortuum); }
+  
+  /* Border Colors */
+  .border-space-cadet { border-color: var(--color-space-cadet); }
+  .border-slate-gray { border-color: var(--color-slate-gray); }
+  .border-tan { border-color: var(--color-tan); }
+  .border-coffee { border-color: var(--color-coffee); }
+  .border-caput-mortuum { border-color: var(--color-caput-mortuum); }
+  
+  /* ========== GRADIENT UTILITIES ========== */
+  .gradient-navy {
+    background: linear-gradient(135deg, var(--color-space-cadet) 0%, var(--color-slate-gray) 100%);
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(135deg, var(--color-tan) 0%, var(--color-coffee) 100%);
+  }
+  
+  .gradient-hero {
+    background: linear-gradient(135deg, var(--color-space-cadet) 0%, var(--space-cadet-700) 50%, var(--color-slate-gray) 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, var(--color-caput-mortuum) 0%, var(--caput-mortuum-700) 50%, var(--color-space-cadet) 100%);
+  }
+  
+  /* ========== SHADOW UTILITIES ========== */
+  .shadow-brand {
+    box-shadow: 0 4px 6px -1px rgb(37 52 79 / 0.1), 0 2px 4px -2px rgb(37 52 79 / 0.1);
+  }
+  
+  .shadow-brand-lg {
+    box-shadow: 0 10px 15px -3px rgb(37 52 79 / 0.1), 0 4px 6px -4px rgb(37 52 79 / 0.1);
+  }
+  
+  .shadow-brand-xl {
+    box-shadow: 0 20px 25px -5px rgb(37 52 79 / 0.1), 0 8px 10px -6px rgb(37 52 79 / 0.1);
+  }
+  
+  .shadow-caput-mortuum {
+    box-shadow: 0 4px 14px 0 rgba(99, 32, 36, 0.3);
+  }
+  
+  .shadow-caput-mortuum-lg {
+    box-shadow: 0 8px 24px 0 rgba(99, 32, 36, 0.4);
+  }
+  
+  /* ========== ANIMATION UTILITIES ========== */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* ========== GLASS EFFECT ========== */
+  .glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .glass-dark {
+    background: rgba(37, 52, 79, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* ========== HOVER EFFECTS ========== */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(37, 52, 79, 0.15);
+  }
+  
+  .hover-glow-tan:hover {
+    box-shadow: 0 0 20px rgba(213, 184, 147, 0.5);
+  }
+  
+  .hover-glow-navy:hover {
+    box-shadow: 0 0 20px rgba(37, 52, 79, 0.3);
+  }
+  
+  .hover-glow-accent:hover {
+    box-shadow: 0 0 25px rgba(99, 32, 36, 0.6);
+  }
+}
